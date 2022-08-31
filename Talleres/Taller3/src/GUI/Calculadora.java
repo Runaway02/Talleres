@@ -182,7 +182,12 @@ public class Calculadora extends JFrame {
 		case "1/x":
 		    resultado = 1/operando2;
 		    break;
-
+		case "%":
+			resultado = operando2%operando1;
+			break;
+		case "±":
+			resultado = operando2*(-1);
+			break;
 		}
 
 		// Formateo y muestro en el display
@@ -252,6 +257,8 @@ public class Calculadora extends JFrame {
 			}
 		});
 	}
+	
+	
 
 	public static void main(String[] args) {
 		new Calculadora();
